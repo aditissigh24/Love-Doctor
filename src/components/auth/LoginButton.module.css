@@ -1,0 +1,77 @@
+.loginButton {
+    background: linear-gradient(135deg, #e94560 0%, #ff6b9d 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.loginButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(233, 69, 96, 0.4);
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.phoneNumber {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.logoutButton {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.logoutButton:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.loading {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+    .userInfo {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-end;
+    }
+
+    .phoneNumber {
+        font-size: 12px;
+    }
+
+    .loginButton,
+    .logoutButton {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+}
+
+
+
+
+
+
+
+
+

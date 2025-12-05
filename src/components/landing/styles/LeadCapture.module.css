@@ -1,0 +1,223 @@
+.leadCapture {
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  background: linear-gradient(180deg, #0f0a14 0%, #1a0a1f 100%);
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: var(--spacing-md);
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #a78bfa 0%, #f9a8d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.form {
+  background: rgba(255, 255, 255, 0.03);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.badges {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-xl);
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: var(--radius-md);
+  font-size: 0.813rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.formGroup {
+  margin-bottom: var(--spacing-lg);
+}
+
+.label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-sm);
+}
+
+.textarea,
+.input,
+.select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.textarea:focus,
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--neon-purple);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.textarea::placeholder,
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a78bfa' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.radioGroup {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  flex: 1;
+  justify-content: center;
+}
+
+.radioLabel:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.radio {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--neon-purple);
+}
+
+.radioLabel:has(.radio:checked) {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: var(--neon-purple);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1.125rem 2rem;
+  background: var(--gradient-primary);
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+  margin-bottom: var(--spacing-md);
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(139, 92, 246, 0.5);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: #10B981;
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .leadCapture {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .form {
+    padding: var(--spacing-lg);
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .radioGroup {
+    flex-direction: column;
+  }
+
+  .radioLabel {
+    width: 100%;
+  }
+
+  .badges {
+    gap: var(--spacing-xs);
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+

@@ -1,0 +1,215 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 450px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.header {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formGroup label {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.phoneInput {
+    font-size: 16px;
+}
+
+.phoneInput input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.phoneInput input:focus {
+    outline: none;
+    border-color: #e94560;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.otpInput {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 8px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.otpInput:focus {
+    outline: none;
+    border-color: #e94560;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.otpInput::placeholder {
+    letter-spacing: normal;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.submitButton {
+    background: linear-gradient(135deg, #e94560 0%, #ff6b9d 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.submitButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
+}
+
+.submitButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.otpActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.linkButton {
+    background: transparent;
+    border: none;
+    color: #e94560;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 8px;
+}
+
+.linkButton:hover:not(:disabled) {
+    color: #ff6b9d;
+    text-decoration: underline;
+}
+
+.linkButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.otplessContainer {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        padding: 32px 24px;
+        max-width: 100%;
+    }
+
+    .header h2 {
+        font-size: 24px;
+    }
+
+    .otpActions {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .linkButton {
+        text-align: center;
+    }
+}
+
